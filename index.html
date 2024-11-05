@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Junio</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/3b9ff962e8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -35,7 +38,7 @@
 
 
 
-<div class="relative">
+<div class="relative overflow-hidden">
     <div class="md:hidden absolute left-[40%] text-white text-3xl z-20 top-[15%] text-center justify-center">
         <i class="fa-brands fa-instagram p-1"></i>
         <i class="fa-brands fa-whatsapp"></i>
@@ -43,12 +46,16 @@
     <div class="md:hidden absolute right-[40%] z-20 top-[35%] text-center justify-center">
         <img src="assets/logo-branco.png" />
     </div>
-    <img src="assets/video.png" class="w-full h-screen object-cover " alt="Background Image">
+    
+    <video class="w-full h-screen object-fill video-zoom" autoplay loop muted>
+        <source src="assets/video.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
     
     <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-20 md:bg-opacity-50 p-4 pt-32 md:pt-0">
-        <h1 class="text-4xl md:text-8xl  md:w-full font-bold mb-6 italic font-serif">Transformando vidas <span class=" md:hidden">através da cirurgia plástica.</span></h1>
-        <p class="hidden md:block  md:text-7xl mb-8 font-serif">através da cirurgia plástica.</p>
-        <a href="#contato" class="px-6 py-3 bg-gray-500 rounded-full hover:bg-blue-700 text-white font-bold  transition uppercase duration-300">Marque sua consulta</a>
+        <h1 class="text-4xl md:text-8xl md:w-full font-bold mb-6 italic font-serif">Transformando vidas <span class="md:hidden">através da cirurgia plástica.</span></h1>
+        <p class="hidden md:block md:text-7xl mb-8 font-serif">através da cirurgia plástica.</p>
+        <a href="#contato" class="px-6 py-3 bg-gray-500 rounded-full hover:bg-blue-700 text-white font-bold transition uppercase duration-300">Marque sua consulta</a>
     </div>
 </div>
 
@@ -127,12 +134,28 @@
             </div>
         </div>
     </div>
-    <div class="mt-20 hidden md:flex   mx-auto justify-center items-center text-center">
-        <img src="assets/carousel.png"   />
+    <div class="carousel mt-10">
+        <div>
+            <img src="carousel/Img.png" alt="Imagem 1" />
+        </div>
+        <div>
+            <img src="carousel/Img2.png" alt="Imagem 2" />
+        </div>
+        <div>
+            <img src="carousel/Img3.png" alt="Imagem 3" />
+        </div>
+        <div>
+            <img src="carousel/Img4.png" alt="Imagem 4" />
+        </div>
+        <div>
+            <img src="carousel/Img5.png" alt="Imagem 5" />
+        </div>
     </div>
-    <div class="mt-20 md:hidden flex justify-center items-center text-center">
-        <img src="assets/carousel-mobile.png"   />
-    </div>
+
+
+
+
+
 </section>
 
 
@@ -224,6 +247,32 @@
 </footer>
 
 
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.carousel').slick({
+            dots: false,
+            centerMode:true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4, 
+            autoplay: true,
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 768, // Para dispositivos menores que 768px
+                    settings: {
+                        slidesToShow: 1, // Exibir 1 imagem no mobile
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    });
+    </script>
 
 </body>
 </html>
