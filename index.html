@@ -6,6 +6,7 @@
     <title>Dr. Junio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/3b9ff962e8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -35,7 +36,7 @@
 
 
 <div class="relative">
-    <div class="md:hidden absolute left-[46%] text-white text-3xl z-20 top-[15%] text-center justify-center">
+    <div class="md:hidden absolute left-[40%] text-white text-3xl z-20 top-[15%] text-center justify-center">
         <i class="fa-brands fa-instagram p-1"></i>
         <i class="fa-brands fa-whatsapp"></i>
     </div>
@@ -80,10 +81,12 @@
 </section>
 
 <section class="h-screen w-full relative flex justify-center items-center">
-    <img src="assets/videoJunio.svg" alt="" class="w-full h-full object-cover">
+    <div class="absolute inset-0 w-full h-full flex justify-center items-center">
+        <img src="assets/videoJunio.svg" alt="Imagem de Fundo" class="object-cover w-full h-full">
+    </div>
 
     <div class="absolute inset-0 flex justify-center items-center">
-        <button class="rounded-full p-24 border-2 border-white bg-transparent flex items-center justify-center">
+        <button class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M3 22v-20l18 10-18 10z" />
             </svg>
@@ -107,7 +110,7 @@
 
             <div class="pt-10 md:pt-20 ">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 pb-4 md:pb-10 md:border-b md:border-black w-full text-center md:text-left">
-                    <span class="block text-5xl md:text-6xl italic font-serif">Transformando</span> 
+                    <span class="block text-3xl md:text-6xl italic font-serif">Transformando</span> 
                     vidas através da cirurgia plástica.
                 </h2>
                 <img src="assets/Palito.png" alt="Imagem Palito" class="md:hidden">
@@ -134,10 +137,12 @@
 
 
 <section class="h-screen w-full relative flex justify-center items-center">
-    <img src="assets/videoJunio.svg" alt="" class="w-full h-full object-cover">
+    <div class="absolute inset-0 w-full h-full flex justify-center items-center">
+        <img src="assets/videoJunio.svg" alt="Imagem de Fundo" class="object-cover w-full h-full">
+    </div>
 
     <div class="absolute inset-0 flex justify-center items-center">
-        <button class="rounded-full p-24 border-2 border-white bg-transparent flex items-center justify-center">
+        <button class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M3 22v-20l18 10-18 10z" />
             </svg>
@@ -145,22 +150,22 @@
     </div>
 </section>
 
-<section class="bg-gray-300 p-8 md:p-14">
+<section class="bg-gray-300 p-8 inset-x-0 md:p-14">
     <div class="mx-auto flex flex-col md:flex-row items-center md:items-start max-w-6xl">
         <div class="md:w-1/2 text-gray-800 space-y-6 md:space-y-8 p-4 md:p-8">
             <div class="flex items-center justify-between">
                 <p class="inline-block rounded-full border border-gray-800 uppercase px-4 py-1 text-sm">Avaliações</p>
                 <div>
-                    <img src="assets/logo-black.png" />
+                    <img src="assets/logo-black.png" class="w-16 md:w-auto" />
                 </div>
             </div>
             <div>
-                <h2 class="text-3xl md:text-4xl font-bold leading-tight">
-                    <span class="italic text-5xl md:text-6xl font-serif">Transformando</span><br>
+                <h2 class="text-4xl md:text-4xl font-bold leading-tight">
+                    <span class="italic  md:text-6xl font-serif">Transformando</span><br>
                     vidas através da cirurgia plástica.
                 </h2>
             </div>
-            <img src="assets/liniker.png" class="md:hidden" />
+            <img src="assets/liniker.png" class="md:hidden  mx-auto" />
             <p class="text-gray-600 text-sm md:text-base leading-relaxed">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac molestie dui. Suspendisse potenti. Aliquam a urna quis mauris finibus pellentesque nec sed massa. Sed nisl lacus, blandit finibus tempus vitae, laoreet eu mi. Nullam mattis eros eget facilisis molestie.”
             </p>
@@ -174,10 +179,11 @@
         </div>
 
         <div class="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
-            <img src="assets/liniker.png" alt="Foto do Paciente" class="w-full max-w-sm md:max-w-md h-auto object-cover hidden md:block">
+            <img src="assets/liniker.png" alt="Foto do Paciente" class="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover hidden md:block">
         </div>
     </div>
 </section>
+
 
 
 <section class="bg-gray-900 text-white p-10 md:p-14">
