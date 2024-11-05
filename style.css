@@ -28,6 +28,12 @@ img,
   }
 }
 
-.slick-slide {
-  margin: 0 5px;
+@media screen and (max-width: 768px) {
+  .slick-slide {
+    margin: 0 5px !important;
+  }
+}
+
+.carousel .slick-slide {
+  margin: 0 10px; /* Aumenta a margem entre as imagens no desktop */
 }
