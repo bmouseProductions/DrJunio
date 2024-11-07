@@ -91,15 +91,23 @@
     <div class="absolute inset-0 w-full h-full flex justify-center items-center">
         <img src="assets/videoJunio.svg" alt="Imagem de Fundo" class="object-cover w-full h-full">
     </div>
-
     <div class="absolute inset-0 flex justify-center items-center">
-        <button class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
+        <button onclick="showVideoPopup1()" class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M3 22v-20l18 10-18 10z" />
             </svg>
         </button>
     </div>
 </section>
+
+<div class="video-popup fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center" id="videoPopup1">
+    <div class="bg-white rounded-lg p-4 max-w-2xl w-full relative">
+        <button class="absolute top-2 right-2 text-gray-600" onclick="closeVideoPopup1()">&times;</button>
+        <div class="aspect-w-16 aspect-h-9">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/OIJjulLxCak?si=H7Cu7Yc1UyHrHLX5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
 
 
 <section class="p-16">
@@ -136,19 +144,94 @@
     </div>
     <div class="carousel mt-10">
         <div>
-            <img src="carousel/Img.png" alt="Imagem 1" />
+            <img src="carousel/Img.png" alt="Imagem 1" onclick="showPopup(1)" />
         </div>
         <div>
-            <img src="carousel/Img2.png" alt="Imagem 2" />
+            <img src="carousel/Img2.png" alt="Imagem 2" onclick="showPopup(2)" />
         </div>
         <div>
-            <img src="carousel/Img3.png" alt="Imagem 3" />
+            <img src="carousel/Img3.png" alt="Imagem 3" onclick="showPopup(3)" />
         </div>
         <div>
-            <img src="carousel/Img4.png" alt="Imagem 4" />
+            <img src="carousel/Img4.png" alt="Imagem 4" onclick="showPopup(4)" />
         </div>
         <div>
-            <img src="carousel/Img5.png" alt="Imagem 5" />
+            <img src="carousel/Img5.png" alt="Imagem 5" onclick="showPopup(5)" />
+        </div>
+    </div>
+
+    <div class="popup fixed z-50 inset-0 bg-black px-5 flex items-center justify-center hidden" id="popup1">
+        <div class="popup-content relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
+            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
+                <div class="xl:flex-1">
+                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/lifiting.png" />
+                </div>
+                <div class="flex-1 p-5 overflow-auto">
+                    <h3 class="text-2xl font-semibold">Lifting Facial</h3>
+                    <p class="mt-2 text-base ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum veniam aliquam exercitationem. Dignissimos aspernatur soluta expedita cumque voluptate neque, sit voluptatem! Illo iste at, officiis possimus voluptatem vero sit.</p>
+                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(1)">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup2">
+        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
+            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
+                <div class="xl:flex-1">
+                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/otoplastia.png" />
+                </div>
+                <div class="flex-1 p-5 overflow-auto">
+                    <h3 class="text-2xl font-semibold">Otoplastia</h3>
+                    <p class="mt-2 text-base ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum veniam aliquam exercitationem. Dignissimos aspernatur soluta expedita cumque voluptate neque, sit voluptatem! Illo iste at, officiis possimus voluptatem vero sit.</p>
+                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(2)">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup3">
+        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
+            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
+                <div class="xl:flex-1">
+                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/blefaroplastia.png" />
+                </div>
+                <div class="flex-1 p-5 overflow-auto">
+                    <h3 class="text-2xl font-semibold">Blefaroplastia</h3>
+                    <p class="mt-2 text-base ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum veniam aliquam exercitationem. Dignissimos aspernatur soluta expedita cumque voluptate neque, sit voluptatem! Illo iste at, officiis possimus voluptatem vero sit.</p>
+                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(3)">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup4">
+        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
+            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
+                <div class="xl:flex-1">
+                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/lipoaspiracao.png" />
+                </div>
+                <div class="flex-1 p-5 overflow-auto">
+                    <h3 class="text-2xl font-semibold">Lipoaspiração</h3>
+                    <p class="mt-2 text-base ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum veniam aliquam exercitationem. Dignissimos aspernatur soluta expedita cumque voluptate neque, sit voluptatem! Illo iste at, officiis possimus voluptatem vero sit.</p>
+                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(4)">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup5">
+        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
+            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
+                <div class="xl:flex-1">
+                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/cirurgiaintima.png" />
+                </div>
+                <div class="flex-1 p-5 overflow-auto">
+                    <h3 class="text-2xl font-semibold">Cirurgia Íntima</h3>
+                    <p class="mt-2 text-base ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum veniam aliquam exercitationem. Dignissimos aspernatur soluta expedita cumque voluptate neque, sit voluptatem! Illo iste at, officiis possimus voluptatem vero sit.</p>
+                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(5)">&times;</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -161,17 +244,25 @@
 
 <section class="h-screen w-full relative flex justify-center items-center">
     <div class="absolute inset-0 w-full h-full flex justify-center items-center">
-        <img src="assets/videoJunio.svg" alt="Imagem de Fundo" class="object-cover w-full h-full">
+        <img src="assets/VideoJunio.svg" alt="Imagem de Fundo" class="object-cover w-full h-full">
     </div>
-
     <div class="absolute inset-0 flex justify-center items-center">
-        <button class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
+        <button onclick="showVideoPopup2()" class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M3 22v-20l18 10-18 10z" />
             </svg>
         </button>
     </div>
 </section>
+
+<div class="video-popup fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center" id="videoPopup2">
+    <div class="bg-white rounded-lg p-4 max-w-2xl w-full relative">
+        <button class="absolute top-2 right-2 text-gray-600" onclick="closeVideoPopup2()">&times;</button>
+        <div class="aspect-w-16 aspect-h-9">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/OIJjulLxCak?si=H7Cu7Yc1UyHrHLX5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
 
 <section class="bg-gray-300 p-8 inset-x-0 md:p-14">
     <div class="mx-auto flex flex-col md:flex-row items-center md:items-start max-w-6xl">
@@ -275,6 +366,34 @@
         });
     });
     </script>
+
+<script>
+    function showPopup(popupNumber) {
+        document.getElementById(`popup${popupNumber}`).classList.remove("hidden");
+    }
+
+    function closePopup(popupNumber) {
+        document.getElementById(`popup${popupNumber}`).classList.add("hidden");
+    }
+</script>
+
+<script>
+    function showVideoPopup1() {
+    document.getElementById("videoPopup1").classList.remove("hidden");
+}
+
+function closeVideoPopup1() {
+    document.getElementById("videoPopup1").classList.add("hidden");
+}
+
+function showVideoPopup2() {
+    document.getElementById("videoPopup2").classList.remove("hidden");
+}
+
+function closeVideoPopup2() {
+    document.getElementById("videoPopup2").classList.add("hidden");
+}
+</script>
 
 </body>
 </html>
