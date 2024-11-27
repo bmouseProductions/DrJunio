@@ -24,3 +24,10 @@ img,
 .carousel .slick-slide {
   margin: 0 10px; /* Aumenta a margem entre as imagens no desktop */
 }
+
+@media (max-width: 768px) {
+  /* Ajuste para o tamanho de tela desejado */
+  .slick-slide img {
+    width: 162px !important; /* Aumenta 10px */
+  }
+}
