@@ -18,7 +18,7 @@
         <a href="" class="hidden md:block flex items-center space-x-3 rtl:space-x-reverse">
             <img src="assets/logo.png" class="h-8" alt="Flowbite Logo">
         </a>
-        <a href="#contato" class=" hidden md:block rounded-full border border-white text-white uppercase p-2 px-4">Contato</a>
+        <a href="https://wa.me/5534999129239?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais" class=" hidden md:block rounded-full border border-white text-white uppercase p-2 px-4">Contato</a>
         <div class="flex hidden md:block md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div class="text-white text-3xl px-4 py-2">
                 <i class="fa-brands fa-instagram p-1"></i>
@@ -89,7 +89,7 @@
 
 <section class="h-screen w-full relative flex justify-center items-center cursor-pointer" onclick="showVideoPopup1()">
     <div class="absolute inset-0 w-full h-full flex justify-center items-center">
-        <img src="assets/videoJunio.svg" alt="Imagem de Fundo" class="object-cover w-full h-full">
+        <img src="assets/drjuniomoreto.webp" alt="Imagem de Fundo" class="object-cover w-full h-full">
     </div>
     <div class="absolute inset-0 flex justify-center items-center">
         <button  class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
@@ -100,20 +100,24 @@
     </div>
 </section>
 
-<div class="video-popup fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center" id="videoPopup1">
-    <div class="bg-white rounded-lg p-4 max-w-2xl w-full relative">
-        <button class="absolute top-2  right-2 text-gray-600 uppercase" onclick="closeVideoPopup1()"><span class="text-2xl">x</span></button>
-        <div class="aspect-w-16 p-10 aspect-h-9">
-            <iframe width="100%" height="315" 
-    src="https://www.youtube.com/embed/tmMuKFEPJyE?autoplay=1&controls=0&si=SVleGTKCy4pCoiIs" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-</iframe>
-
+<div class="video-popup fixed inset-0 bg-black bg-opacity-75 hidden flex justify-center items-center z-50" id="videoPopup1">
+    <div class="bg-white rounded-lg p-10 max-w-screen-lg w-full h-[80vh] relative">
+        <button class="absolute top-2 right-6  text-black px-4 py-2 rounded-full shadow-lg  text-2xl font-bold" onclick="closeVideoPopup1()">
+            x
+        </button>
+        <div class="w-full h-full mt-8">
+            <iframe 
+                class="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/tmMuKFEPJyE?autoplay=1&controls=0&si=SVleGTKCy4pCoiIs" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 </div>
+
+
 
 
 <section class="p-16">
@@ -549,11 +553,11 @@
                         </h2>
                     </div>
                     <img src="assets/depoimento01.webp" class="md:hidden mx-auto" />
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                    <!-- <p class="text-gray-600 text-sm md:text-base leading-relaxed">
                         “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac molestie dui. Suspendisse potenti. Aliquam a urna quis mauris finibus pellentesque nec sed massa.”
-                    </p>
+                    </p> -->
                     <div>
-                        <p class="font-bold text-lg">Liniker de Barros</p>
+                        <p class="font-bold text-lg">Roberta Fagundes</p>
                         <p class="text-sm text-gray-600">Paciente</p>
                     </div>
                 </div>
@@ -595,11 +599,11 @@
                             </div>
                         </button>
                     </div>
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                    <!-- <p class="text-gray-600 text-sm md:text-base leading-relaxed">
                         “Sed nisl lacus, blandit finibus tempus vitae, laoreet eu mi. Nullam mattis eros eget facilisis molestie.”
-                    </p>
+                    </p> -->
                     <div>
-                        <p class="font-bold text-lg">Roberta Fagundes</p>
+                        <p class="font-bold text-lg">Helen Cristina</p>
                         <p class="text-sm text-gray-600">Paciente</p>
                     </div>
                 </div>
@@ -620,26 +624,40 @@
 
         
         <div id="instapopup1" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
-            <div class="relative bg-white p-4 max-w-2xl ">
-              <button 
-                class="absolute top-2 right-2 text-gray-600 hover:text-black" 
-                onclick="instaclosePopup1()">✖</button>
-              
-              <div class="aspect-w-16 aspect-h-9">
-                <iframe src="https://www.instagram.com/reel/DA06rpjJkWb/embed" width="400" height="480" frameborder="0"></iframe>
+            <div class="relative bg-white p-4 max-w-sm">
+                <button 
+                    class="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl z-10" 
+                    onclick="instaclosePopup1()">✖</button>
+                <div class="aspect-w-16 aspect-h-9">
 
-              </div>
+                    <iframe 
+                        class="w-[640px] h-[360px] sm:w-[854px] sm:h-[480px] md:w-[1280px] md:h-[720px] max-w-full max-h-full"
+                        src="https://player.vimeo.com/video/1034515296?h=5abd8aa275&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        title="Vídeo da paciente Roberta">
+                    </iframe>
+                </div>
             </div>
-          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
 
           <div id="instapopup2" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
-            <div class="relative bg-white p-4 max-w-2xl ">
+            <div class="relative bg-white p-4 max-w-sm ">
               <button 
                 class="absolute top-2 right-2 text-gray-600 hover:text-black" 
                 onclick="instaclosePopup2()">✖</button>
               
               <div class="aspect-w-16 aspect-h-9">
-                <iframe src="https://www.instagram.com/reel/C9cTcXbPWYH/embed" width="400" height="480" frameborder="0"></iframe>
+                
+                <iframe class="w-[640px] h-[360px] sm:w-[854px] sm:h-[480px] md:w-[1280px] md:h-[720px] max-w-full max-h-full" src="https://player.vimeo.com/video/1034534539?h=64747c836e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"  title="Depoimento - Helen Cristina"></iframe>
 
               </div>
             </div>
@@ -666,7 +684,9 @@
             <p class="text-gray-400 text-sm md:text-base mb-5 mt-5">
                 Cada detalhe é pensado para oferecer a melhor experiência, desde a primeira consulta até o resultado final. Redescubra sua confiança e celebre sua melhor versão!
             </p>
-
+            <div class="mx-auto text-center">
+                <button class="border border-white mt-6 md:mt-10 rounded-full py-3 md:py-4 px-6 md:px-10 uppercase" ><a href="https://wa.me/5534999129239?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais" target="_blank">Agendar consulta</a></button>
+            </div>
         </div>
     </div>
 </section>
@@ -677,7 +697,7 @@
             <img src="assets/logo.png" alt="Logo" class="w-16 h-auto  hidden md:block">
             <img src="assets/logo-footer.png" class="w-32 mx-auto pb-32 pt-24 md:hidden" />
             <p class="md:text-sm pb-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac molestie dui. Suspendisse potenti. Aliquam a urna quis mauris finibus pellentesque nec sed massa.
+                Transformando vidas através da cirurgia plástica.
             </p>
         </div>
         
@@ -686,7 +706,8 @@
             <p class="text-lg">📍 Rua Prefeito Camundinho, 515, Patos de Minas 38700-227</p>
             <p class="text-lg">✉️ drjunimoreto@gmail.com</p>
         </div>
-        <img src="assets/bmouse-footer.png"  class="md:hidden mt-32"/>
+       <p class="mt-10 text-center">© Todos os direitos reservados - Dr. Junio Moreto 
+        Criado por Bmouse Productions</p>
     </div>
 </footer>
 
