@@ -87,9 +87,9 @@
     </div>
 </section>
 
-<section class="h-screen w-full relative flex justify-center items-center cursor-pointer" onclick="showVideoPopup1()">
+<section class="h-screen  w-full relative flex justify-center items-center cursor-pointer" onclick="showVideoPopup1()">
     <div class="absolute inset-0 w-full h-full flex justify-center items-center">
-        <img src="assets/drjuniomoreto.webp" alt="Imagem de Fundo" class="object-cover w-full h-full">
+        <img src="assets/drjuniomoreto.webp" alt="Imagem de Fundo" class="object-cover  md:w-full md:h-full w-full h-1/2">
     </div>
     <div class="absolute inset-0 flex justify-center items-center">
         <button  class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
@@ -120,7 +120,7 @@
 
 
 
-<section class="p-16">
+<section class="md:p-16 p-10 mt-0">
     <div class="mx-auto flex flex-col md:flex-row items-stretch flex-wrap">
         <div class="w-full md:w-1/2 flex justify-center md:justify-center mb-6 md:mb-0">
             <img src="assets/Palito.png" alt="Imagem Palito" class="hidden md:block">
@@ -238,275 +238,348 @@
         </div>
     </div>
 
-    <div class="popup fixed z-50 inset-0 bg-black px-5 flex items-center justify-center hidden" id="popup1">
-        <div class="popup-content relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/lifiting.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup1">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <!-- Imagem -->
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg" 
+                        src="popup/lifiting.png" alt="Lifting Facial e Cervical" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Lifting Facial e Caervical</h3>
-                    <p class="mt-2 text-base ">O lifting facial e cervical é um procedimento indicado para combater os sinais avançados de envelhecimento na face e no pescoço. A técnica remove o excesso de pele flácida, reposiciona os tecidos e redefine os contornos faciais, proporcionando um aspecto mais rejuvenescido, natural e firme. Ideal para quem busca restaurar a vitalidade sem perder a expressão individual.
+    
+                <!-- Conteúdo -->
+                <div class="relative flex-1 p-5">
+                    <!-- Botão de fechar -->
+                    <button 
+                        class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" 
+                        onclick="closePopup(1)">
+                        &times;
+                    </button>
+    
+                    <h3 class="text-xl sm:text-2xl font-semibold">Lifting Facial e Cervical</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        O lifting facial e cervical é um procedimento indicado para combater os sinais avançados de envelhecimento 
+                        na face e no pescoço. A técnica remove o excesso de pele flácida, reposiciona os tecidos e redefine os 
+                        contornos faciais, proporcionando um aspecto mais rejuvenescido, natural e firme. Ideal para quem busca 
+                        restaurar a vitalidade sem perder a expressão individual.
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(1)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup2">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/otoplastia.png" />
+    
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup2">
+        <div class="popup relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/otoplastia.png" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Otoplastia</h3>
-                    <p class="mt-2 text-base ">A otoplastia é uma cirurgia plástica realizada nas orelhas, para correções como orelhas proeminentes (em abano) ou assimetrias, deixando-as em um formato mais proporcional ao rosto. Esse procedimento é indicado tanto para crianças quanto para adultos, trazendo benefícios estéticos e, muitas vezes, emocionais, como o aumento da autoestima e confiança.</p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(2)">&times;</button>
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(2)">&times;</button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Otoplastia</h3>
+                    <p class="mt-2 text-sm sm:text-base ">A otoplastia é uma cirurgia plástica realizada nas orelhas, para correções como orelhas proeminentes (em abano) ou assimetrias, deixando-as em um formato mais proporcional ao rosto. Esse procedimento é indicado tanto para crianças quanto para adultos, trazendo benefícios estéticos e, muitas vezes, emocionais, como o aumento da autoestima e confiança.</p>
+
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup3">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/blefaroplastia.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup3">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/blefaroplastia.png" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Blefaroplastia</h3>
-                    <p class="mt-2 text-base ">A blefaroplastia é a cirurgia realizada nas pálpebras superiores e inferiores. O procedimento remove o excesso de pele, bolsas de gordura, flacidez e corrige a ptose (queda da pálpebra) proporcionando um olhar mais rejuvenescido e melhorando assimetrias. É uma ótima opção para quem busca melhorar a aparência e até aliviar desconfortos relacionados à visão, causados por excesso de pele.</p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(3)">&times;</button>
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(3)">&times;</button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Blefaroplastia</h3>
+                    <p class="mt-2 text-sm sm:text-base ">A blefaroplastia é a cirurgia realizada nas pálpebras superiores e inferiores. O procedimento remove o excesso de pele, bolsas de gordura, flacidez e corrige a ptose (queda da pálpebra) proporcionando um olhar mais rejuvenescido e melhorando assimetrias. É uma ótima opção para quem busca melhorar a aparência e até aliviar desconfortos relacionados à visão, causados por excesso de pele.</p>
+
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup4">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/lipoaspiracao.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup4">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/lipoaspiracao.png" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Lipoescultura</h3>
-                    <p class="mt-2 text-base ">A lipoescultura combina a remoção de gordura localizada com a modelagem do corpo, redistribuindo a gordura retirada para áreas que necessitam de volume, como glúteos ou coxas. Esse procedimento é ideal para quem deseja um contorno corporal mais harmonioso, aproveitando ao máximo os benefícios da lipoaspiração.</p>
+                <div class="relative flex-1 p-5">
                     <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(4)">&times;</button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Lipoescultura</h3>
+                    <p class="mt-2 text-sm sm:text-base ">A lipoescultura combina a remoção de gordura localizada com a modelagem do corpo, redistribuindo a gordura retirada para áreas que necessitam de volume, como glúteos ou coxas. Esse procedimento é ideal para quem deseja um contorno corporal mais harmonioso, aproveitando ao máximo os benefícios da lipoaspiração.</p>
+  
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup5">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/cirurgiaintima.png" />
-                </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Cirurgias reparadoras</h3>
-                    <p class="mt-2 text-base ">As cirurgias reparadoras visam corrigir deformidades congênitas, lesões traumáticas ou resultados insatisfatórios de procedimentos anteriores. Com foco em funcionalidade e estética, essas intervenções ajudam a restaurar a confiança e melhorar a qualidade de vida dos pacientes.</p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(5)">&times;</button>
-                </div>
+<!-- Popup genérico reutilizável -->
+<div class="popup fixed z-50 inset-0 bg-black bg-opacity-60 px-5 flex items-center justify-center hidden" id="popup5">
+    <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+        <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+            <!-- Imagem -->
+            <div class="w-full xl:w-1/2">
+                <img class="w-full h-56 sm:h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="popup/cirurgiaintima.png" alt="Cirurgia Íntima" />
+            </div>
+            <!-- Conteúdo -->
+            <div class="relative flex-1 p-5">
+                <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(5)">&times;</button>
+                <h3 class="text-xl sm:text-2xl font-semibold">Cirurgias reparadoras</h3>
+                <p class="mt-2 text-sm sm:text-base">
+                    As cirurgias reparadoras visam corrigir deformidades congênitas, lesões traumáticas ou resultados insatisfatórios de procedimentos anteriores. Com foco em funcionalidade e estética, essas intervenções ajudam a restaurar a confiança e melhorar a qualidade de vida dos pacientes.
+                </p>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup6">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img6.png" />
+<!-- Popup 6 -->
+<div class="popup fixed z-50 inset-0 bg-black bg-opacity-60 px-5 flex items-center justify-center hidden" id="popup6">
+    <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+        <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+            <div class="w-full xl:w-1/2">
+                <img class="w-full h-56 sm:h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img6.png" alt="Rinoplastia" />
+            </div>
+            <div class="relative flex-1 p-5">
+                <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(6)">&times;</button>
+                <h3 class="text-xl sm:text-2xl font-semibold">Rinoplastia</h3>
+                <p class="mt-2 text-sm sm:text-base">
+                    A rinoplastia é uma cirurgia realizada para remodelar o nariz, seja para fins estéticos ou para corrigir problemas funcionais, como desvio de septo.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup 7 -->
+<div class="popup fixed z-50 inset-0 bg-black bg-opacity-60 px-5 flex items-center justify-center hidden" id="popup7">
+    <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+        <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+            <div class="w-full xl:w-1/2">
+                <img class="w-full h-56 sm:h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img7.png" alt="Lipoenxertia em Face" />
+            </div>
+            <div class="relative flex-1 p-5">
+                <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(7)">&times;</button>
+                <h3 class="text-xl sm:text-2xl font-semibold">Lipoenxertia em Face</h3>
+                <p class="mt-2 text-sm sm:text-base">
+                    A lipoenxertia facial utiliza a gordura retirada de outras áreas do corpo do próprio paciente para preencher sulcos, rugas ou áreas com perda de volume.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup 8 -->
+<div class="popup fixed z-50 inset-0 bg-black bg-opacity-60 px-5 flex items-center justify-center hidden" id="popup8">
+    <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+        <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+            <div class="w-full xl:w-1/2">
+                <img class="w-full h-56 sm:h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img8.png" alt="Mamoplastia de Aumento" />
+            </div>
+            <div class="relative flex-1 p-5">
+                <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(8)">&times;</button>
+                <h3 class="text-xl sm:text-2xl font-semibold">Mamoplastia de Aumento</h3>
+                <p class="mt-2 text-sm sm:text-base">
+                    A mamoplastia de aumento utiliza próteses de silicone para melhorar o volume e o formato das mamas.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup9">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img9.png" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Rinoplastia</h3>
-                    <p class="mt-2 text-base ">A rinoplastia é uma cirurgia realizada para remodelar o nariz, seja para fins estéticos ou para corrigir problemas funcionais, como desvio de septo. O procedimento pode modificar o tamanho, o formato ou o ângulo do nariz, harmonizando-o com o restante do rosto. Além de melhorar a aparência, também pode trazer benefícios significativos à respiração e qualidade de vida.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(9)">&times;</button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Mamoplastia redutora</h3>
+                    <p class="mt-2 text-sm sm:text-base">A mamoplastia redutora é indicada para mulheres que possuem mamas excessivamente grandes, o que pode causar dores nas costas, ombros e pescoço, além de dificuldades para realizar atividades diárias. A cirurgia reduz o tamanho e o peso das mamas, melhorando a postura, aliviando desconfortos físicos e promovendo uma aparência mais proporcional ao corpo.
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(6)">&times;</button>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup7">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img7.png" />
+
+
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup10">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg"
+                         src="carousel/Img10.png" alt="Mastopexia com e sem implantes" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Lipoenxertia em face</h3>
-                    <p class="mt-2 text-base ">A lipoenxertia facial é um procedimento que utiliza a gordura retirada de outras áreas do corpo do próprio paciente para preencher sulcos, rugas ou áreas com perda de volume, como maçãs do rosto e lábios. Além de proporcionar rejuvenescimento, a técnica oferece resultados naturais e melhora a textura da pele, já que a gordura possui propriedades regenerativas.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none"
+                            onclick="closePopup(10)">
+                        &times;
+                    </button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Mastopexia com e sem implantes</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        A mastopexia é a cirurgia que corrige a flacidez e a queda das mamas, reposicionando-as para uma aparência mais firme e elevada...
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(7)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup8">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img8.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup11">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg"
+                         src="carousel/Img11.png" alt="Reconstrução mamária" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Mamoplastia de aumento</h3>
-                    <p class="mt-2 text-base ">A mamoplastia de aumento é um procedimento que utiliza próteses de silicone para melhorar o volume e o formato das mamas. Indicada para mulheres que desejam aumentar o tamanho dos seios ou restaurar o volume perdido após gravidez ou perda de peso, a cirurgia proporciona resultados naturais e harmoniosos, respeitando o desejo e a anatomia de cada paciente.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none"
+                            onclick="closePopup(11)">
+                        &times;
+                    </button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Reconstrução mamária</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        A reconstrução mamária é um procedimento que busca restaurar a forma e o volume das mamas...
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(8)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup9">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img9.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup12">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg"
+                         src="carousel/Img12.png" alt="Abdominoplastia" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Mamoplastia redutora</h3>
-                    <p class="mt-2 text-base ">A mamoplastia redutora é indicada para mulheres que possuem mamas excessivamente grandes, o que pode causar dores nas costas, ombros e pescoço, além de dificuldades para realizar atividades diárias. A cirurgia reduz o tamanho e o peso das mamas, melhorando a postura, aliviando desconfortos físicos e promovendo uma aparência mais proporcional ao corpo.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none"
+                            onclick="closePopup(12)">
+                        &times;
+                    </button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Abdominoplastia</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        A abdominoplastia é indicada para remover o excesso de pele e gordura acumulados na região abdominal...
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(9)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
-
-
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup10">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img10.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup13">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg"
+                         src="carousel/Img13.png" alt="Abdominoplastia em âncora" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Mastopexia com e sem implantes</h3>
-                    <p class="mt-2 text-base ">A mastopexia é a cirurgia que corrige a flacidez e a queda das mamas, reposicionando-as para uma aparência mais firme e elevada. Quando associada ao uso de próteses de silicone, além de restaurar a forma, também adiciona volume, proporcionando resultados ainda mais satisfatórios. É ideal para mulheres que desejam recuperar a firmeza dos seios após a amamentação, envelhecimento ou perda de peso.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none"
+                            onclick="closePopup(13)">
+                        &times;
+                    </button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Abdominoplastia em âncora</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        A abdominoplastia em âncora é voltada para pacientes que apresentam excesso de pele significativo...
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(10)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup11">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img11.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup14">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg"
+                         src="carousel/Img14.png" alt="Lipoabdominoplastia" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Reconstrução mamária</h3>
-                    <p class="mt-2 text-base ">A reconstrução mamária é um procedimento que busca restaurar a forma e o volume das mamas, geralmente após a realização de mastectomias ou traumas. Utilizando técnicas como implantes, retalhos de tecido ou gordura do próprio corpo, a cirurgia devolve autoestima e confiança às pacientes, proporcionando resultados estéticos e funcionais.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none"
+                            onclick="closePopup(14)">
+                        &times;
+                    </button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Lipoabdominoplastia</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        A lipoabdominoplastia combina os benefícios da lipoaspiração e da abdominoplastia...
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(11)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup12">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img12.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup15">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg"
+                         src="carousel/Img15.png" alt="Torsoplastia" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Abdominoplastia</h3>
-                    <p class="mt-2 text-base ">A abdominoplastia é indicada para remover o excesso de pele e gordura acumulados na região abdominal, além de reparar a flacidez muscular. Esse procedimento é especialmente recomendado para pessoas que passaram por grandes variações de peso ou gestações, proporcionando um abdômen mais plano, firme e bem definido.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none"
+                            onclick="closePopup(15)">
+                        &times;
+                    </button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Torsoplastia</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        A torsoplastia é um procedimento que remodela a região do tronco e da cintura...
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(12)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup13">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img13.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-60 px-5 flex items-center justify-center hidden" id="popup16">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img16.png" alt="Braquioplastia (braço)" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Abdominoplastia em âncora</h3>
-                    <p class="mt-2 text-base ">A abdominoplastia em âncora é voltada para pacientes que apresentam excesso de pele significativo na região abdominal, geralmente após grandes perdas de peso. A técnica remove pele e gordura em excesso em formato de T invertido, melhorando o contorno corporal e proporcionando uma aparência mais proporcional e estética.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(16)">&times;</button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Braquioplastia (braço)</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        A braquioplastia remove o excesso de pele e gordura nos braços, resultando em contornos mais firmes e proporcionais. Esse procedimento é ideal para pessoas com flacidez na região, comum após perda de peso significativa ou envelhecimento.
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(13)">&times;</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup14">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img14.png" />
-                </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Lipoabdominoplastia</h3>
-                    <p class="mt-2 text-base ">A lipoabdominoplastia combina os benefícios da lipoaspiração e da abdominoplastia em um único procedimento. Ela remove a gordura localizada e o excesso de pele na região abdominal, enquanto esculpe o corpo, resultando em um contorno mais definido e harmonioso.
-                    </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(14)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup15">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img15.png" />
+    <div class="popup fixed z-50 inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden" id="popup17">
+        <div class="popup-content relative z-50 w-full max-w-[90%] md:w-[70%] lg:w-[65%] rounded-lg overflow-hidden">
+            <div class="flex flex-col xl:flex-row bg-[#f5f6fa] rounded-xl">
+                <div class="w-full xl:w-1/2">
+                    <img class="w-full h-56 sm:h-full sm:object-cover object-contain rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img17.png" alt="Dermolipectomia crural (perna)" />
                 </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Torsoplastia</h3>
-                    <p class="mt-2 text-base ">A torsoplastia é um procedimento que remodela a região do tronco e da cintura, eliminando o excesso de pele e gordura. É frequentemente indicada para pacientes que passaram por grandes emagrecimentos, ajudando a melhorar o contorno corporal e a qualidade de vida.
+                <div class="relative flex-1 p-5">
+                    <button class="close absolute top-3 right-3 text-gray-600 text-2xl font-bold focus:outline-none" onclick="closePopup(17)">&times;</button>
+                    <h3 class="text-xl sm:text-2xl font-semibold">Dermolipectomia crural (perna)</h3>
+                    <p class="mt-2 text-sm sm:text-base">
+                        A dermolipectomia crural é uma cirurgia indicada para eliminar o excesso de pele e gordura na região das coxas, proporcionando um contorno mais firme e estético. É especialmente recomendada para pacientes que passaram por grandes emagrecimentos e desejam melhorar a aparência e o conforto.
                     </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(15)">&times;</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup16">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img16.png" />
-                </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Braquioplastia (braço)</h3>
-                    <p class="mt-2 text-base ">A braquioplastia remove o excesso de pele e gordura nos braços, resultando em contornos mais firmes e proporcionais. Esse procedimento é ideal para pessoas com flacidez na região, comum após perda de peso significativa ou envelhecimento.
-                    </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(16)">&times;</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="popup fixed z-50 inset-0 bg-black/60 px-5 flex items-center justify-center hidden" id="popup17">
-        <div class="relative z-50 w-full md:w-[70%] lg:w-[65%] rounded-lg">
-            <div class="flex flex-col xl:flex-row  overflow-auto bg-[#f5f6fa] rounded-xl">
-                <div class="xl:flex-1">
-                    <img class="w-full h-full object-cover rounded-t-lg xl:rounded-none xl:rounded-l-lg" src="carousel/Img17.png" />
-                </div>
-                <div class="flex-1 p-5 overflow-auto">
-                    <h3 class="text-2xl font-semibold">Dermolipectomia crural (perna)</h3>
-                    <p class="mt-2 text-base ">A dermolipectomia crural é uma cirurgia indicada para eliminar o excesso de pele e gordura na região das coxas, proporcionando um contorno mais firme e estético. É especialmente recomendada para pacientes que passaram por grandes emagrecimentos e desejam melhorar a aparência e o conforto.
-                    </p>
-                    <button class="close absolute top-2 right-2 text-gray-600" onclick="closePopup(17)">&times;</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
 
 </section>
