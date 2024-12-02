@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Aventa";
+  src: url("./Font/aventa/Aventa-LightItallicPERSONALUSEONLY.otf");
+}
+
+@font-face {
+  font-family: "woman";
+  src: url("./Font/woman/BeautyDisplayRegular.ttf");
+}
+
+.aventa {
+  font-family: "Aventa";
+}
+
+.woman {
+  font-family: "woman";
+}
+
 body {
   margin: 0;
   overflow-x: hidden !important;
