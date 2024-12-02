@@ -96,7 +96,7 @@
         <img src="assets/drjuniomoreto.webp" alt="Imagem de Fundo" class="object-cover  md:w-full md:h-full w-full h-1/2">
     </div>
     <div class="absolute inset-0 flex justify-center items-center">
-        <button  class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center">
+        <button  class="rounded-full p-10 border-2 border-white bg-transparent flex items-center justify-center z-40">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M3 22v-20l18 10-18 10z" />
             </svg>
@@ -106,17 +106,9 @@
 
 <div class="video-popup fixed inset-0 bg-black bg-opacity-75 hidden flex justify-center items-center z-50" id="videoPopup1">
     <div class="bg-white rounded-lg p-10 max-w-screen-lg w-full h-[80vh] relative">
-        <button class="absolute top-2 right-6  text-black px-4 py-2 rounded-full shadow-lg  text-2xl font-bold" onclick="closeVideoPopup1()">
-            x
-        </button>
-        <div class="w-full h-full mt-8">
-            <iframe 
-                class="w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/tmMuKFEPJyE?autoplay=1&controls=0&si=SVleGTKCy4pCoiIs" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        <button class="absolute top-2 right-6 text-black px-4 py-2 rounded-full shadow-lg text-2xl font-bold" onclick="closeVideoPopup1()">x</button>
+        <div class="w-full h-full mt-8 iframe-container">
+            <!-- O iframe será injetado aqui dinamicamente -->
         </div>
     </div>
 </div>
@@ -146,19 +138,19 @@
                 <div class="md:hidden border-b border-black w-full mt-10 mb-10"></div>
                 <ul class="list-none space-y-4">
                     <li class="relative pl-6">
-                        <span class="absolute left-0 top-0 text-green-500">✔</span>
+                        <span class="absolute left-0 top-0 text-black">✔</span>
                         <strong>Formação de Excelência:</strong> Especializações realizadas em instituições de referência nacional.
                     </li>
                     <li class="relative pl-6">
-                        <span class="absolute left-0 top-0 text-green-500">✔</span>
+                        <span class="absolute left-0 top-0 text-black">✔</span>
                         <strong>Abordagem Personalizada:</strong> Cada paciente recebe um plano único, baseado em suas necessidades e objetivos.
                     </li>
                     <li class="relative pl-6">
-                        <span class="absolute left-0 top-0 text-green-500">✔</span>
+                        <span class="absolute left-0 top-0 text-black">✔</span>
                         <strong>Cuidado e Segurança:</strong> Procedimentos realizados com técnicas avançadas e equipamentos modernos.
                     </li>
                     <li class="relative pl-6">
-                        <span class="absolute left-0 top-0 text-green-500">✔</span>
+                        <span class="absolute left-0 top-0 text-black">✔</span>
                         <strong>Resultados Naturais:</strong> Foco em realçar sua beleza de forma discreta e harmoniosa.
                     </li>
                 </ul>
@@ -821,7 +813,7 @@
 </footer>
 
 <!-- Botão WhatsApp -->
-<div class="fixed bottom-5 right-5">
+<div class="fixed bottom-5 right-5 z-50">
     <a href="https://wa.me/5534999129239?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais" target="_blank" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition flex items-center justify-center">
         <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" class="w-6 h-6"/>
     </a>
@@ -830,7 +822,7 @@
 
 <div class="fixed bottom-5 left-5 flex flex-col space-y-3 z-50">
     <!-- Back to Top -->
-    <a href="#top" class="bg-black text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition">
+    <a href="#top" class="bg-[#908F8D] text-white p-3 rounded-full shadow-lg  transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
         </svg>
@@ -881,14 +873,30 @@
 </script>
 
 <script>
-    function showVideoPopup1() {
-    document.getElementById("videoPopup1").classList.remove("hidden");
-}
+ function showVideoPopup1() {
+        const iframeContainer = document.querySelector("#videoPopup1 .iframe-container");
+        
+        // Recriar o iframe ao abrir o popup
+        iframeContainer.innerHTML = `
+            <iframe 
+                class="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/tmMuKFEPJyE?autoplay=1&controls=0&si=SVleGTKCy4pCoiIs" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        `;
 
-function closeVideoPopup1() {
-    document.getElementById("videoPopup1").classList.add("hidden");
-}
+        document.getElementById("videoPopup1").classList.remove("hidden");
+    }
 
+    function closeVideoPopup1() {
+        document.getElementById("videoPopup1").classList.add("hidden");
+        
+        // Remover o iframe para parar o vídeo
+        const iframeContainer = document.querySelector("#videoPopup1 .iframe-container");
+        iframeContainer.innerHTML = "";
+    }
 function showVideoPopup2() {
     document.getElementById("videoPopup2").classList.remove("hidden");
 }
